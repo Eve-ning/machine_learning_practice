@@ -26,11 +26,11 @@ smy_bias = tf.summary.scalar("Bias", val_bias)
 smy_mult = tf.summary.scalar("Mult", val_mult)
 
 smy_merged = tf.summary.merge_all()
-smy_writer = tf.summary.FileWriter("summary")
 
 epochs = 100
 
 with tf.Session() as sess:
+  smy_writer = tf.summary.FileWriter("summary/out_1", graph=sess.graph)
   sess.run(tf.global_variables_initializer())
   step = 0
   for epoch in range(epochs):
