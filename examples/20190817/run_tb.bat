@@ -1,0 +1,2 @@
+Tensorboard  --logdir=summary
+PAUSE
