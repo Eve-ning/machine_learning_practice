@@ -11,7 +11,6 @@ import matplotlib.pyplot as plt
 
 tf.reset_default_graph()
 
-
 data_x_1 = np.random.normal(0, 1, [100, 1])
 data_x_2 = np.random.normal(2, 1, [100, 1])
 data_y = data_x_1 + data_x_2
@@ -45,6 +44,8 @@ with tf.Session() as sess:
                              })
     loss_list.append(loss)
     
+plt.scatter(range(100), loss_list)
+plt.show()
     
     
   
